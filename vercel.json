@@ -13,15 +13,11 @@
   "routes": [
     {
       "src": "/api/identify",
-      "destination": "./api/identify.js"
+      "dest": "./api/identify.js"
     },
     {
       "src": "/api/index",
-      "destination": "./api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "destination": "/api/index.js"
+      "dest": "./api/index.js"
     }
   ]
 }
