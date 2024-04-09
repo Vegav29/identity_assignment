@@ -2,22 +2,30 @@
   "version": 2,
   "builds": [
     {
-      "src": "./api/server.js",
+      "src": "api/identify.js",
       "use": "@vercel/node"
     },
     {
-      "src": "./api/identify.js",
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/identify",
-      "dest": "./api/identify.js"
+      "dest": "api/identify.js"
     },
     {
-      "src": "/api/server]]",
-      "dest": "./api/server.js"
+      "src": "/api/index",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
     }
   ]
 }
