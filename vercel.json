@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "routes": [
+      { "src": "/api/identify", "dest": "api/identify.js" },
+      { "src": "/", "dest": "api/index.js" }
+    ],
+    "builds": [
+      { "src": "index.js", "use": "@vercel/node" }
+    ]
+  }
